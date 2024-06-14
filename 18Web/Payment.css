@@ -1,0 +1,227 @@
+:root {
+    --primary: #005343;
+    --bg: #010101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url("img/Gambar11.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transform: translateY(20px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1{
+    text-align: left;
+    font-size: 2.6rem;
+    margin-top: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+h2{
+    text-align: center;
+    font-size: 2.6rem;
+    color: rgb(0, 0, 0);
+}
+
+h2 span{
+    color: var(--primary);
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem 7%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo img{
+    text-align: center;
+    max-width: 4rem;
+    max-height: 20rem;
+    margin: auto;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 2rem;
+}
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+input[type="radio"]{
+    position: fixed;
+    margin-top: 4rem;
+}
+
+.dana{
+    height: 100px;
+    width: 100px;
+    margin-left: 25rem ;
+    margin-top: 2rem;
+    position: relative;
+}
+
+h3{
+    color: #010101;
+    position: fixed;
+    margin-top: -4rem;
+    margin-left: 5rem;
+    text-align: right;
+
+}
+
+.BRI{
+    height: 100px;
+    width: 100px;
+    margin-left: 25rem ;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.BTN{
+    height: 100px;
+    width: 200px;
+    margin-left: 22rem ;
+    margin-top: 2rem;
+    position: relative;
+}
+input[type="text"],
+input[type="month"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #005343;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+input[type="submit"]:hover {
+    background-color: #005343;
+}
+
+
+input[type="file"]{
+    width: calc(100% - 2em);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #005343;
+    color: #fff;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .credit {
+    margin-top: 10px;
+}
+
+.socials a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+}

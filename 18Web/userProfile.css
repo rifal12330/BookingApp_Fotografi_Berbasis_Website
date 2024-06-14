@@ -1,0 +1,261 @@
+:root {
+    --primary: #005343;
+    --bg: #010101;
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem 7%;
+    background-color: rgb(1, 1, 1);
+    border-bottom: 0.5px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo img {
+    max-width: 4rem;
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+/* profile-section */
+.profile-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    margin-top: 20rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile-details {
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.profile-details p {
+    margin: 0.5rem 0;
+}
+
+.edit-profile-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.edit-profile-button:hover {
+    background-color: #0056b3;
+}
+
+.uploaded-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.image-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.image-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.image-card p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Upload section */
+.upload {
+    display: grid;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+
+.container {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #666;
+    font-weight: bold;
+}
+
+input[type="file"],
+textarea {
+    width: calc(100% - 2em);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.7em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="hidden"] {
+    display: none;
+}
+
+
+/* Footer */
+footer {
+    background-color: #005343;
+    text-align: center;
+    padding: 1rem 0 1.5rem;
+    margin-top: 10rem;
+}
+
+footer .socials {
+    padding: 1rem 0;
+}
+
+footer .socials a {
+    color: #fff;
+    margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+    color: #010101;
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+
+footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
+}

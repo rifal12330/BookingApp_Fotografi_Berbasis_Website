@@ -1,0 +1,671 @@
+:root {
+  --primary: #005343;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  min-height: 3000px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HomePage Start */
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem 7%;
+  background-color: rgb(1, 1, 1);
+  border-bottom: 0.5px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo img {
+  text-align: center;
+  max-width: 5rem;
+  max-height: 20rem;
+  margin: auto;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 3rem;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+  /* background-color: #555; */
+  border-radius: 5px;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar-extra {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.navbar-extra #profile {
+  margin-right: 20px;
+}
+
+.navbar-extra .profile-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+#log-out i {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* hero section */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('img/Gambar1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transform: translateY(20px);
+}
+
+.hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(0deg,rgba(1,1,3,1) 8%, rgba(255,255,255,0) 55%);
+  bottom: 0;
+  
+} 
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span{
+  color: #ebf0a3;
+}
+.hero .content p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem ;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+
+}
+
+/* about section */
+.about {
+  padding: 10rem 7% 1.4rem;
+}
+
+.about h2{
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.about h2 span {
+  color: var(--primary);
+}
+
+.about .row{
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 35rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 5rem 7% 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.6rem;
+  text-align: justify;
+  padding: 1rem 7% 2rem;
+}
+
+/* Portofolio section */
+
+.portofolio {
+  padding: 10rem 7% 6rem;
+}
+.portofolio h2{
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.portofolio h2 span {
+  color: var(--primary);
+}
+
+.portofolio p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.portofolio .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.portofolio .list-card {
+  margin: 1.5rem auto 1rem;
+}
+
+.portofolio .row .list-card {
+  text-align: center;
+}
+
+.portofolio .row .list-card img{
+  text-align: center;
+  max-width: 18rem;
+  margin: auto;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.6;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.portofolio .row .list-card .cta-wedding {
+  display: flex;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px rgb(255, 255, 255);
+  max-width: 88%;
+  color: #fff;
+  padding: 1rem 2rem ;
+  transform: translateX(15px);  
+}
+.portofolio .row .list-card a:hover {
+  color: var(--bg);
+}
+
+.portofolio .row .list-card .cta-CP {
+  display: flex;
+  margin-left: 3rem;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px rgb(255, 255, 255);
+  max-width: 67%;
+  color: #fff;
+  padding: 1rem 2rem ;
+}
+
+.portofolio .row .list-card .cta-engagement {
+  display: flex;
+  margin-left: 4rem;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px rgb(255, 255, 255);
+  max-width: 58%;
+  color: #fff;
+  padding: 1rem 2rem ;
+}
+
+.portofolio .row .list-card .cta-ads {
+  display: flex;
+  margin-left: 4rem;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px rgb(255, 255, 255);
+  max-width: 58%;
+  color: #fff;
+  padding: 1rem 2rem ;
+}
+
+/*ulasan section */
+.ulasan {
+  padding: 10rem 7% 1.7rem;
+}
+.ulasan h2{
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.ulasan h2 span {
+  color: var(--primary);
+}
+
+.ulasan p{
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.ulasan .row{
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+  flex-wrap: wrap;
+}
+
+.ulasan .row .map{
+  flex: 1 1 45rem;
+  object-fit: cover;
+  height: 30rem;
+}
+
+.ulasan .row form{
+  flex: 1 1 45rem;
+  padding: 5rem 2rem ;
+  text-align: center;
+}
+
+.ulasan .row form .input-group{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.ulasan .row form .input-group textarea{
+  background-color: #010101;
+  color: white;
+  padding-left: 2rem;
+  align-content: center;
+  font-family: sans-serif;
+  font-size: 1.7rem;
+}
+
+.ulasan .row form .input-group input{
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+
+.ulasan .row form .btn{
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+/* ulasan-masuk */
+.ulasan-masuk{
+  align-items: center;
+  padding-top: 4rem;
+  display: flex;
+  padding: 4rem;
+
+
+}
+.ulasan-masuk h2{
+  text-align: center;
+  font-size: 2.6rem;
+  padding-top: 4rem;
+  padding: 3rem;
+}
+
+.ulasan-masuk h2 span{
+  color: #ebf0a3;
+}
+
+.ulasan-container {
+  padding: 2rem;
+  display: inline-block;
+}
+
+/* footer */
+footer {
+  background-color: #005343;
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+  margin-top: 3rem;
+}
+
+footer .socials{
+  padding: 1rem 0;
+}
+
+footer .socials a{
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover{
+  color: #010101;
+}
+
+footer .links{
+  margin-bottom: 1.4rem;
+}
+
+footer .links a{
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a{
+  color: var(--bg);
+  font-weight: 700;
+}
+/* HomePage end */
+
+/* photography portofolio */
+ /* WeddingPage Start  */
+
+    .weddingPage{
+      min-height:1000px;
+    }
+    .wedding h1{
+      text-align: center;
+      padding: 3rem;
+      font-size: 2.5rem;
+    }
+    
+    .wedding h1 span{
+      color: var(--primary);
+    }
+    
+    .porto .photography img {
+    max-width: 100%;
+    max-height:100%;
+    padding-top: rem;
+      
+    }
+    
+    .porto .photography h1{
+      text-align: center;
+      padding: 3rem;
+      font-size: 2.5rem;
+      padding-top: 7rem;
+    }
+    
+    .porto .photography h1 span{
+      color: var(--primary);
+    }
+
+    .porto .videography-container video{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-bottom: 11rem;
+    }
+  
+  /* WeddingPage End */
+
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 50vw;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after{
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a::after{
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+  
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .ulasan .row{
+    flex-wrap: wrap;
+  }
+
+  .ulasan .row .map{
+    height: 30rem;
+  }
+
+  .ulasan .row form{
+    padding-top: 0;
+  }
+}
+
+
+/* Mobile Phone */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  /* Contoh: Menyembunyikan beberapa elemen untuk membuat tampilan lebih ramping */
+  .sidebar {
+    display: none;
+  }
+
+  .ulasan .row {
+    flex-wrap: wrap;
+  }
+
+  .ulasan .row .map {
+    flex: 1 1 100%; /* Lebar penuh pada layar ponsel */
+    height: 30rem;
+    margin-bottom: 2rem; /* Spasi bawah antara peta dan formulir */
+  }
+
+  .ulasan .row form {
+    flex: 1 1 100%; /* Lebar penuh pada layar ponsel */
+    padding: 2rem; /* Padding untuk formulir */
+  }
+
+  .ulasan .row form .input-group {
+    flex-direction: column; /* Menata input secara vertikal */
+    margin-top: 1rem; /* Spasi atas antara input */
+  }
+
+
+  .ulasan .row form .input-group input,
+  .ulasan .row form .input-group textarea {
+    width: 100%; /* Lebar penuh untuk input */
+  }
+
+  .ulasan .row form .btn {
+    margin-top: 2rem; /* Spasi atas untuk tombol */
+  }
+  /* Contoh: Mengatur lebar gambar agar sesuai dengan lebar layar */
+  img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  /* Contoh: Menyesuaikan tata letak menu navigasi */
+  .nav-menu {
+      flex-direction: column; /* Menata menu secara vertikal */
+  }
+
+  .ulasan-masuk {
+    flex-direction: column; /* Menata elemen secara vertikal */
+    align-items: center; /* Pusatkan elemen */
+    padding: 2rem; /* Padding untuk ruang antara elemen */
+  }
+
+  .ulasan-masuk h2 {
+    padding: 1rem 0; /* Padding atas dan bawah untuk judul */
+    font-size: 2rem; /* Ukuran font yang lebih kecil */
+    text-align: center; /* Pusatkan teks */
+  }
+
+  .ulasan-container {
+    width: 100%; /* Lebar penuh untuk kontainer ulasan */
+    margin-top: 2rem; /* Spasi atas antara judul dan kontainer ulasan */
+  }
+
+  .ulasan-container textarea {
+    width: 100%; /* Lebar penuh untuk textarea */
+  }
+
+}
+
+
+

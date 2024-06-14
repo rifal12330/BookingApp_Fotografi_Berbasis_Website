@@ -1,0 +1,251 @@
+:root {
+    --primary: #005343;
+    --bg: #010101;
+}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(219, 219, 219);
+    color: #000000;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem 7%;
+    background-color: rgb(1, 1, 1);
+    border-bottom: 0.5px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo img{
+    text-align: center;
+    max-width: 4rem;
+    max-height: 20rem;
+    margin: auto;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+.main-card{
+    margin: 0 auto;
+    position: relative;    
+    background-color:white;
+    width: 1100px;
+    min-height: 350px;
+    margin-top: 14rem;
+    border-radius: 5px;
+}
+
+/* main card */
+.main-card table {
+    width: 100%;
+    border-collapse: separate;
+}
+.main-card table, th, td {
+    border: 1px solid black;
+}
+.main-card th, td {
+    padding: 10px;
+    text-align: left    ;
+}
+
+.main-card .data-table{
+    font-size: 10px;
+}
+
+.main-card h1{
+    color: var(--bg);
+    margin: 0 auto;
+    text-align: center;
+    font-size: medium;
+}
+.main-card h1 span{
+    color: #005343;
+}
+
+.main-card p{
+    color: var(--bg);
+}
+
+.delete-button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 1px 1px var(--bg);
+}
+
+.edit-button{
+    background-color: rgb(0, 174, 255);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 1px 1px var(--bg);
+}
+
+/* small card */
+.small-1-card{
+    position: absolute;
+    background-color:rgb(251, 255, 217);
+    width: 180px;
+    height: 100px;
+    margin-left: 22.3rem;
+    margin-top: 6rem;
+    border-radius: 5px;
+} 
+
+
+.small-1-card h1{
+    color: var(--bg);
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+.small-1-card h6{
+    color: var(--primary);
+    margin-left: 1rem;
+}
+
+.small-2-card{
+    position: absolute;
+    background-color:rgb(251, 255, 217);
+    width: 180px;
+    height: 100px;
+    margin-left: 34rem;
+    margin-top: 6rem;
+    border-radius: 5px;
+} 
+
+.small-2-card h1{
+    color: var(--bg);
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+.small-2-card h6{
+    color: var(--primary);
+    margin-left: 1rem;
+}
+
+.small-3-card{
+    position: absolute;
+    background-color:rgb(251, 255, 217);
+    width: 180px;
+    height: 100px;
+    margin-left: 45.7rem;
+    margin-top: 6rem;
+    border-radius: 5px;
+} 
+
+.small-3-card h1{
+    color: var(--bg);
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+.small-3-card h6{
+    color: var(--primary);
+    margin-left: 1rem;
+}
+
+/* user card */
+.user-card{
+    margin: 0 auto;
+    position: relative;    
+    background-color:white;
+    width: 1100px;
+    min-height: 350px;
+    margin-top: 14rem;
+    border-radius: 5px;
+}
+
+.user-card table {
+    width: 100%;
+    border-collapse: separate;
+}
+.user-card table, th, td {
+    border: 1px solid black;
+}
+.user-card th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.user-card .data-table{
+    font-size: 10px;
+}
+
+.user-card h1{
+    color: var(--bg);
+    margin: 0 auto;
+    text-align: center;
+    font-size: medium;
+}
+.user-card h1 span{
+    color: #005343;
+}
+
+.user-card p{
+    color: var(--bg);
+}
+
+

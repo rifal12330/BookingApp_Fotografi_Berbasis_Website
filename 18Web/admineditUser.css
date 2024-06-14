@@ -1,0 +1,154 @@
+:root {
+    --primary: #005343;
+    --bg: #010101;
+}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(219, 219, 219);
+    color: #000000;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem 7%;
+    background-color: rgb(1, 1, 1);
+    border-bottom: 0.5px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo img{
+    text-align: center;
+    max-width: 4rem;
+    max-height: 20rem;
+    margin: auto;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+/* admin Edit User */
+form {
+    font-family: Arial, sans-serif;
+    width: 500px;
+    height: 400px;
+    margin-top: 10rem;
+    margin-left: 13rem;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+
+fieldset {
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 4rem;
+}
+
+input[type="datetime-local"]{
+    background-color: beige;
+    color: var(--bg);
+    border-radius: 2px;
+}
+/* bookingForm End */
